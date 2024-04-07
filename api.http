@@ -6,3 +6,36 @@ Content-Type: application/json
   "details": "lets go dog",
   "maximumAttendees": 100
 }
+###
+POST http://localhost:3333/events/d420c792-edc0-4ea1-918e-4e787e9188e4/attendees
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john.doe@gmail.com"
+}
+
+###
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+  "title": "New Event2",  
+  "details": null,
+  "maximumAttendees": 10
+}
+
+###
+POST http://localhost:3333/events/2bebeea6-4b97-4c43-b0a9-2899ed5586f6/attendees
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john.doe9@gmail.com"
+}
+
+###
+GET http://localhost:3333/events/2bebeea6-4b97-4c43-b0a9-2899ed5586f6
+
+###
+GET http://localhost:3333/attendees/3/badge

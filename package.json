@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch --env-file .env src/server.ts"
+    "build": "tsup src --format esm",
+    "dev": "tsx watch watch-poll --env-file .env src/server.ts",
+    "db:migrate": "prisma migrate dev",
+    "db:studio": "prisma studio"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +21,7 @@
   "dependencies": {
     "@prisma/client": "^5.12.1",
     "fastify": "^4.26.2",
+    "fastify-type-provider-zod": "^1.1.9",
     "zod": "^3.22.4"
   }
 }
